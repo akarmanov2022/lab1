@@ -331,10 +331,17 @@ void Lab1::SearchIndexOf(const int *array, int l) {
     cout << "Enter searching value:";
     cin >> search;
 
+    bool isFound = false;
     int i = 0;
-    for (; i < l; ++i)
-        if (array[i] == search)
+    for (; i < l; ++i) {
+        isFound = array[i] == search;
+        if (isFound)
             break;
+    }
 
-    cout << "Index of searching value " << search << " is: " << i << endl;
+    if (isFound)
+        cout << "Index of searching value " << search << " is: " << i << endl;
+    else
+        cout << "Value is missing from the array!" << endl;
+
 }
