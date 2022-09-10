@@ -41,6 +41,10 @@ public:
 
     static void task18Run();
 
+    static void task19Run();
+
+    static void task20Run();
+
 private:
     static double GetPower(double base, int exponent);
 
@@ -62,9 +66,11 @@ private:
 
     static void Search(double *arr, int n);
 
-    void Search(int *arr, int n);
-
     static void printArray(int *arr, int length);
 
     static void SearchIndexOf(const int *array, int l);
+
+    static void SearchLetters(char *chars, int l);
+
+    static int* MakeRandomArray(int size);
 };

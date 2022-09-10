@@ -66,6 +66,12 @@ int main() {
             case 18:
                 Lab1::task18Run();
                 break;
+            case 19:
+                Lab1::task19Run();
+                break;
+            case 20:
+                Lab1::task20Run();
+                break;
             default:
                 cout << "Incorrect value!" << endl;
         }

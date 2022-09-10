@@ -324,6 +324,8 @@ void Lab1::task18Run() {
     printArray(pInt, l);
 
     SearchIndexOf(pInt, l);
+
+    delete[] pInt;
 }
 
 void Lab1::SearchIndexOf(const int *array, int l) {
@@ -345,3 +347,48 @@ void Lab1::SearchIndexOf(const int *array, int l) {
         cout << "Value is missing from the array!" << endl;
 
 }
+
+void Lab1::task19Run() {
+    int l = 15;
+    char *chars = new char[l]
+            {'s', 'f', 'q', '3', 'H',
+             's', 'b', 'x', '1', '0',
+             ']', 'a', 'z', 'k', '.'};
+    printArray(chars, l);
+
+    SearchLetters(chars, l);
+
+    delete[] chars;
+}
+
+void Lab1::SearchLetters(char *chars, int l) {
+    cout << "All letters in your array:" << endl;
+    for (int i = 0; i < l; ++i)
+        if (chars[i] >= 'a' && chars[i] <= 'z')
+            cout << chars[i] << " ";
+    cout << endl;
+}
+
+void Lab1::task20Run() {
+    int *r5 = MakeRandomArray(5);
+    int *r8 = MakeRandomArray(8);
+    int *r13 = MakeRandomArray(13);
+
+
+    printArray(r5, 5);
+    printArray(r8, 8);
+    printArray(r13, 13);
+
+    delete[] r5;
+    delete[] r8;
+    delete[] r13;
+}
+
+int *Lab1::MakeRandomArray(int size) {
+    int *array = new int[size];
+    for (int i = 0; i < size; ++i)
+        array[i] = rand();
+    return array;
+}
+
+
